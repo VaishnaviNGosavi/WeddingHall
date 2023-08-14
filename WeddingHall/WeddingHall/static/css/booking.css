@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100%;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    background: linear-gradient(180deg, rgb(97, 146, 192) 0%, rgb(219, 219, 219) 100%);
+}
+/* For Webkit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: Set a semi-transparent color for the scrollbar thumb */
+}
+
+
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-block: 15px;
+}
+.navbar a {
+    font-size: 23px;
+    text-decoration: none;
+    color: #fbf5e0;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    color: #a40000;
+}
+
+.logo {
+    font-weight: bolder;
+    margin-left: 50px;
+    font-size: 30px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin-right: 1cm;
+    font-size: 20px;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+img{
+    position: relative;
+    height: 225px;
+    width: 100%;
+}
+
+h2{
+    color: #f5f5f5;
+    text-align: center;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0.5cm 0.5cm 1cm 0;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+/* Footer css */
+
+.bottom-div {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Set the width of the div to occupy the full width of the viewport */
+    padding: 10px; /* Optional styling */
+    text-align: center; /* Optional styling */
+}
+
+.abt{
+    color: #000000;
+    margin: 30px 2cm;
+    padding: 30px 40px;
+    background-image: url(https://github.com/Siddhesh25082001/Marriage-Hall-Management-System/blob/main/images/about.png?raw=true);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1cm;
+}
+
+.about{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+.left img{
+    height: 7cm;
+    width: 10cm;
+    margin: auto 1cm;
+    border-radius: 10px;
+}
+
+.right p{
+    text-align: justify;
+    padding: 2px 0;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+.right{
+    width: 69%;
+    margin: 30px 25px;
+}
+
+.title{
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.footer{
+    text-align: center;
+    color: #1f78c0c7;
+    padding: 8px 15px;
+    font-size: 20px;
+    margin-bottom: 0.5cm;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+.hr1{
+    width: 83%;
+    margin: 0.5cm auto 0.5cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+.hr2{
+    width: 83%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+.hr3{
+    width: 100%;
+    margin: 1cm auto;
+    border-top: 0;
+    border-bottom: 2px solid #fbf5e0;
+    border-style: dashed;
+}
+
+
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 22cm;
+    margin-bottom: 1cm;
+    justify-content: center;
+}
+
+
+.modal{
+    position: relative;
+    margin-left: 10%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1cm;
+    left: 0;
+    padding-top: 20cm;
+    max-height: 22cm;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 30px;
+    width: 80%;
+}
+
+
+
+.modal2{
+    margin-left: 10%;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    height: 5cm;
+    margin-bottom: 1cm;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 50px;
+    width: 80%;
+}
+.modal2 .input1 {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #8c8c8c;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #212121;
+    padding: 5px 10px;
+}
+
+.input1:focus {
+    border: 1px solid #b2b2b2;
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    overflow-y: scroll;
+    border-radius: 40%;
+}
+
+thead{
+    background-color: rgb(0, 116, 169);
+    color: #fff;
+    font-size: 18px;
+    height: 25px;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+}
+
+tbody{
+    background-color: #e4e4e4;
+}
+
+tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    
+    height: 55px;
+}
+
+
+td{
+    text-align: center;
+    padding: 5px 10px;
+}
+
+
+select{
+    background-color: transparent;
+    color: #710000;
+    border-radius: 5px;
+    margin-top: 0.1cm;
+    margin-bottom: 0.2cm;
+    height: 1cm;
+    font-weight: 600;
+    font-size: large;
+}
+
+.input2{
+    color: #710000;
+    border-radius: 5px;
+    margin-top: 0.1cm;
+    margin-bottom: 0.2cm;
+    margin-left: 0.2cm;
+    padding: 0.1cm;
+    font-weight: 600;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add css */
+.container {
+    width: 100%;
+    margin: 0.5cm 0.5cm 1cm 0;
+    padding: 15px;
+}
+
+form{
+    color: #d0cdbe;
+    border: 1px solid #a7a59c;
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 100%;
+    height: 13cm;
+    box-shadow: 1px 5px 15px #fbf5e0 ;
+}
+
+.input{
+    margin-top: 0.5cm;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+}
+
+label{
+    color: #dddddd;
+    margin-right: 0.5cm;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-select1{
+    background-color: #cbcbcb;
+    color: #004671;
+    border-radius: 5px;
+    margin-left: 0.2cm;
+    padding: 0.1cm;
+    width: 8cm;
+    font-weight: 600;
+    font-size: large;
+    margin-right: 1cm;
+}
+
+.form-select{
+    background-color: #cbcbcb;
+    color: #004671;
+    border-radius: 5px;
+    margin-left: 0.2cm;
+    padding: 0.1cm;
+    width: 100%;
+    font-weight: 600;
+    font-size: large;
+}
+
+.input2{
+    background-color: #cbcbcb;
+    color: #004671;
+    border-radius: 5px;
+    margin-left: 0.2cm;
+    padding: 0.1cm;
+    font-weight: 600;
+    height: 1cm;
+    width: 4cm;
+    font-size: large;
+}
+
+.input21{
+    background-color: #cbcbcb;
+    color: #004671;
+    border-radius: 5px;
+    margin-left: 0.2cm;
+    padding: 0.1cm;
+    font-weight: 600;
+    height: 1cm;
+    width: 100%;
+    font-size: large;
+}
+
+.top {
+    width: 50%;
+    background: transparent;
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    margin: 0cm auto 1.5cm;
+}
+form .input_field {
+    margin-bottom: 5px;
+}
+
+form ::placeholder  {
+    color: rgb(120, 120, 120);
+}
+form .input_field .input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    padding: 7px 10px;
+}
+
+form .input_field .input:focus {
+    border: 1px solid #f42a0b;
+}
+
+.input_field1 .input {
+    width: 48.5%;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    padding: 7px 10px;
+    margin-right: 10px; /* Optional: Add some spacing between the inputs */
+    box-sizing: border-box; 
+}
+
+
+
+
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #dddddd;
+    background: transparent;
+    padding: 6px 30px;
+    border: 2px solid #dddddd;
+    border-radius: 15px;
+}
+
+
+.btns{
+    display: inline-block;
+    text-decoration: none;
+    color: #006aba;
+    background: transparent;
+    padding: 6px 30px;
+    right: 0;
+    border: 2px solid#006aba;
+    border-radius: 15px;
+}
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 25px #003371, 0 0 50px #0766da;
+    }
+}
+.btn:hover {
+    animation: pulse 0.5s ease-in-out;
+    box-shadow: 0 0 25px #254892, 0 0 50px #1e70e3;
+}
+.btns:hover {
+    animation: pulse 0.5s ease-in-out;
+    box-shadow: 0 0 25px #8f8f8f, 0 0 50px #e7e7e7;
+}
+
+
+
+
+
+/* Index css */
+.hall{
+    width: 25%;
+    margin: 30px 30px;
+    height: 350px;
+    min-width: 10cm;
+    cursor: pointer;
+    transition: all 0.5ms ease-in-out;
+    text-align: center;
+    align-self: center;
+    border-bottom-right-radius: 50px;
+}
+
+
+.hall-name{
+    position: relative;
+    height: 75%;
+    background-image: url(../images/hall-1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-rep   eat;
+}
+
+.hall .view{
+    position: relative;
+    text-align: center;
+    height: 20%;
+    padding: 20px 0;
+    border-bottom-right-radius: 50px;
+    background: #fbf5e0;
+}
+
+img{
+    position: relative;
+    height: 275px;
+    width: 100%;
+}
+
+
+h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2{
+    color: #f5f5f5;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 0.3cm;
+    padding: 5px 20px;
+    border: 2px solid #fbf5e0;
+    border-radius: 8px;
+}
+.button:hover{
+    
+    box-shadow: 
+        0 0 25px #478dff,
+        0 0 50px #d9d9d9;
+}
+
+
+
+
+/* Hall css */
+.modal_container1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    left: 0;
+    width: 100vw;
+}
+
+.modalx{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 50px;
+    width: 80%;
+    max-width: 100%;
+}
+
+.btns{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Login css */
+
+.login-container {
+	display: block;
+	position: relative;
+	z-index: 0;
+    margin: 5rem auto 0;
+    padding: 0rem 0rem 0rem 0rem;
+	width: 100%;
+    height: 500px;
+    border-radius: 1cm;
+    margin-bottom: 20%;
+	max-width: 450px;
+	box-shadow: 0 20px 90px 50px rgb(183, 199, 246);
+}
+
+
+.login-container:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+    border-radius: 1cm;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-shadow: 0 -20px 150px -20px rgba(10, 101, 219, 0.853);
+}
+
+.form-login {
+	background-image: radial-gradient(ellipse at left bottom, rgba(93, 136, 169, 0.9) 0%,rgba(100, 147, 165, 0.6) 50%, rgba(64, 132, 192, 0.9) 100%);
+	padding-top: 1cm;
+	position: relative;
+	z-index: 1;
+}
+
+
+.a {
+	position: relative;
+	color: #f0efef;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 30px;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-bottom: 0.7cm;
+	font-weight: bold;
+	padding-bottom: .5rem;
+	transition: .20s all ease;
+}
+
+.a:after {
+	content: '';
+    display: inline-block;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 100%;
+    bottom: -1px;
+    left: 0;
+    border-radius: 50%;
+    transition: .15s all ease;
+}
+
+.a:after{
+	background-color: rgb(198, 198, 198);
+	height: 3px;
+	right: 0;
+	bottom: 9px;
+	width:2.8cm;
+	border-radius: 0;
+	transition: .20s all ease;
+}
+
+
+.login__input {
+	color: white;
+	font-size: 25px;
+	width: 100%;
+	padding: 0.3rem 1rem;
+	border: 2px solid transparent;
+	outline: none;
+    margin-bottom: 0.5cm;
+    margin-top: 0.2cm;
+	border-radius: 1rem;
+	background-color: transparent;
+	border: 2px solid rgba(218, 218, 218, 0.67);
+	letter-spacing: 1px;
+}
+
+.login__input::placeholder {
+	color: rgb(78, 78, 78);
+}
+
+.login__input:focus{
+	color: white;
+	border: 2px solid rgb(255, 255, 255);
+
+}
+
+
+.login__submit {
+	color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: .75rem;
+	border-radius: 2rem;
+	display: block; /* This makes the button a block-level element */
+    margin: 1cm auto;
+	width: 50%;
+	background-color: rgb(19, 100, 206);
+	border: none;
+	cursor: pointer;
+}
+
+
+.login__submit:hover{
+	background-color: rgb(18, 53, 103);
+    animation: pulsate 10s ease-in-out;
+}
+@keyframes pulsate{
+    0%{
+        box-shadow:
+        0 0 25px #ffffff,
+        0 0 50px #a7adbd;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Intro css */
+.card {
+  position: relative;
+  margin: 0.3cm;
+  margin-bottom: 20px;
+  width: 280px;
+  height: 400px;
+  border-radius: 10px;
+  background: rgba(59, 137, 185, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.img-bx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px) scale(0.5);
+  transform-origin: top;
+}
+
+.img-bx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.content .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content .detail h2 {
+  color: #444;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+.content .detail h2 span {
+  font-size: 0.7em;
+  color: #03a9f4;
+  font-weight: bold;
+}
